@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 
 import App from './app.js';
 
-class Main extends React.Component {
-  render() {
+const Main = () => {
+ 
     return <App />;
-  }
+
 }
 
 const rootElement = document.getElementById('root');
