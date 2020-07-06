@@ -5,7 +5,7 @@
 ### Author: Ammar Al-Hariry
 
 ## Links and Resources
-- [pull request]()
+- [pull request](https://github.com/401-advanced-javascript-ammar-hariry/todo/pull/1)
 - [github Action]()
 
 ### Packages and modules
@@ -22,5 +22,5 @@
 
 
 ### UML:
-![Uml ](https://i.ibb.co/BNHq0S6/react-uml.png)
+![Uml ](https://i.ibb.co/DwZ6fcx/20200706-030137.jpg)
 
