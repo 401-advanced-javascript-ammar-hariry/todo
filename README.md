@@ -5,8 +5,10 @@
 ### Author: Ammar Al-Hariry
 
 ## Links and Resources
-- [pull request](https://github.com/401-advanced-javascript-ammar-hariry/todo/pull/1)
-- [github Action](https://github.com/401-advanced-javascript-ammar-hariry/todo/runs/839675391)
+
+- [pull request](https://github.com/401-advanced-javascript-ammar-hariry/todo/pull/2)
+- [github Action]()
+
 
 ### Packages and modules
 - ``node-sass``
@@ -15,10 +17,14 @@
 - ``react-scripts``
 - ``bootstrap``
 - ``react-bootstrap``
+- ``axios``
+
+
 
 
 #### How to initialize/run your application (where applicable)
 - ``npm run start``
+
 
 
 ### UML:
