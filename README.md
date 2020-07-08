@@ -6,8 +6,8 @@
 
 ## Links and Resources
 
-- [pull request](https://github.com/401-advanced-javascript-ammar-hariry/todo/pull/2)
-- [github Action]()
+- [pull request](https://github.com/401-advanced-javascript-ammar-hariry/todo/pull/3)
+- [github Action](https://github.com/401-advanced-javascript-ammar-hariry/todo/runs/848113242)
 
 
 ### Packages and modules
