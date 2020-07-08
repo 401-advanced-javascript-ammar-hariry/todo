@@ -6,8 +6,8 @@
 
 ## Links and Resources
 
-- [pull request](https://github.com/401-advanced-javascript-ammar-hariry/todo/pull/3)
-- [github Action](https://github.com/401-advanced-javascript-ammar-hariry/todo/runs/848113242)
+- [pull request](https://github.com/401-advanced-javascript-ammar-hariry/todo/pull/4)
+- [github Action](https://github.com/401-advanced-javascript-ammar-hariry/todo/runs/851982230)
 
 
 ### Packages and modules
@@ -18,12 +18,15 @@
 - ``bootstrap``
 - ``react-bootstrap``
 - ``axios``
+-``jsonwebtoken``
+- ``react-cookies``
 
 
 
 
 #### How to initialize/run your application (where applicable)
 - ``npm run start``
+
 
 
 
