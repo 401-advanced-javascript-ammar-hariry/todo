@@ -1,9 +1,12 @@
 import React from 'react';
 import { ListGroup ,Button , Toast,ToastHeader} from 'react-bootstrap';
+import { FilterContext } from '../../context/pagenation'
 
+var arr;
 const TodoList = (props) => {
 
-      return (props.list.map((val, idx) => { 
+      return (props.list.sort((a,b) =>  a.difficulty-b.difficulty ))
+      .map((val, idx) => { 
         let status;
         let complete;
         !val.complete ? status = 'danger' : status = 'success';
@@ -17,12 +20,13 @@ const TodoList = (props) => {
 			complete: !val.complete,},val._id)  }
          variant={`${status}`}>{complete}</Button>{' '}
          <strong className="mr-auto assign" >{val.assignee}</strong>
-         <Button className='closedel' variant="outline-dark"  onClick={()=>props.handleDelete(val._id) }>X</Button>
+       <Button className='closedel' variant="outline-dark"  onClick={()=>props.handleDelete(val._id) }>X </Button>
        </ToastHeader>
        <Toast.Body className='assign'>{val.item}</Toast.Body>
        <small className='difficult'>Difficulty: {val.difficulty}</small>
      </Toast>
-    }));
+     
+    });
 }
 
 export default TodoList;
