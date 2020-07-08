@@ -44,8 +44,8 @@ const useForm = (callback) => {
                 console.log(res);
                 console.log(res.data);
 
-	  });
-	  handleGet();
+            });
+        handleGet();
     }
     const habdleDelete = (_id) => {
 
@@ -53,8 +53,8 @@ const useForm = (callback) => {
             .then(res => {
                 console.log(res);
                 console.log(res.data);
-	  })
-	handleGet();
+            })
+        handleGet();
     }
     return [toDoData, handleGet, habdlePost, habdleDelete, handelUpdate];
 }
