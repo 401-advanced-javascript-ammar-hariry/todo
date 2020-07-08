@@ -5,8 +5,11 @@ import App from './app.js';
 
 const Main = () => {
  
-    return <App />;
-
+    return(
+	<>
+	<App />
+	</>
+    ) 
 }
 
 const rootElement = document.getElementById('root');

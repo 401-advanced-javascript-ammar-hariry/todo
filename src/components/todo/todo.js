@@ -1,22 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect , useContext} from 'react';
 import { Navbar, Container } from 'react-bootstrap';
+import { FilterContext } from '../../context/pagenation'
 import TodoForm from './form.js';
 import TodoList from './list.js';
 import useForm from '../../hooks/custom-form'
 import './todo.scss';
 
+
 let once =0;
 function ToDo() {
+	const context = useContext(FilterContext);
 	let temp ;
 	let [toDoData, handleGet, habdlePost, habdleDelete, handelUpdate] = useForm(temp);
 	let data = [];
 	Object.keys(toDoData).map((val, idx) => { 
-         data.push(toDoData[val])
+		data.push(toDoData[val])
 	})
 	
 	if(once === 0){
-	console.log('im here');
-	
+		console.log('im here');
 		handleGet();
 		once++ ;
 	         }
@@ -67,11 +69,12 @@ function ToDo() {
   useEffect(() => {
 
     setCount(Object.keys(toDoData).filter(item => !toDoData[item].complete).length);
-    document.title = `${count} completed Tasks`;
+    document.title = `${count} Uncompleted Tasks`;
   }, [count, toDoData]);
 
   return (
     <>
+
       <Container>
         <Navbar bg="dark" variant="dark" style={{ marginTop: 2 + 'em' }}>
           <Navbar.Brand >To DO Manager ({count}) </Navbar.Brand>
@@ -85,10 +88,9 @@ function ToDo() {
               </div>
           </section>
       </Container>
+     
     </>
   );
 }
-
-
 
 export default ToDo;
