@@ -6,8 +6,8 @@
 
 ## Links and Resources
 
-- [pull request](https://github.com/401-advanced-javascript-ammar-hariry/todo/pull/4)
-- [github Action](https://github.com/401-advanced-javascript-ammar-hariry/todo/runs/851982230)
+- [pull request](https://github.com/401-advanced-javascript-ammar-hariry/todo/pull/5)
+- [github Action](https://github.com/401-advanced-javascript-ammar-hariry/todo/runs/861353221)
 
 
 ### Packages and modules
@@ -26,6 +26,8 @@
 
 #### How to initialize/run your application (where applicable)
 - ``npm run start``
+- sign in or sign up
+- choose one of the roles to make an access to the content
 
 
 
