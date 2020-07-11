@@ -6,26 +6,23 @@ import LogIn from './components/login'
 import Auth from './components/auth'
 import Signup from './components/signup'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-const Todo2 = props => {
-	return (
-	    <Auth>
-		<ToDo />
-	    </Auth>
-	)
-      }
+import SettingsContext from './context/pagination'
 
 class App extends React.Component {
 render(){
 	return (
+		<SettingsContext>
 		<LoginContext>
 		<Navbar bg="primary" variant="dark">
 		       <Navbar.Brand >Home</Navbar.Brand>
 		 <LogIn />
 		    </Navbar>
-		    <Todo2 />
+		<Auth>
+		<ToDo />
+	   	 </Auth>
 		 <Signup />
-		    </LoginContext>
+		</LoginContext>
+		</SettingsContext>
 	      );
 }
 
