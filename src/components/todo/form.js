@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import useForm from '../../hooks/custom-form'
 
-
 function TodoForm(props) {
 
   let emptyCall ;
@@ -12,14 +11,19 @@ function TodoForm(props) {
 //     setItem({ ...item, [e.target.name]: e.target.value });
   }
 
-  const _handleSubmit = (e) => {
+  const _handleSubmit = async (e) => {
+	  e.preventDefault();	
+	  let item = e.target.text.value;
+	  let assignee = e.target.assignee.value;
+	  let difficulty = e.target.difficulty.value;
+	  let complete = false;
+	  let postObj =  await {item ,assignee,difficulty,complete}
+	  habdlePost(postObj);
+	setTimeout(function refresh(){
 
-    let item = e.target.text.value;
-    let assignee = e.target.assignee.value;
-    let difficulty = e.target.difficulty.value;
-    let complete = false;
-    let postObj = {item ,assignee,difficulty,complete}
-    habdlePost(postObj);
+	     window.location.reload(false);
+	},500);
+	  handleGet();
   };
 
   return (

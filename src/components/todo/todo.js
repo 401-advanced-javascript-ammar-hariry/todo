@@ -1,27 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Container } from 'react-bootstrap';
-// import  {LoginContext}  from '../../context/pagenation'
 import TodoForm from './form.js';
 import TodoList from './list.js';
+
 import useForm from '../../hooks/custom-form'
 import './todo.scss';
 
 
 let once =0;
 function ToDo() {
-	// const contextLogin = useContext(LoginContext);
+
 	let temp ;
 	let [toDoData, handleGet, habdlePost, habdleDelete, handelUpdate] = useForm(temp);
 	let data = [];
 	Object.keys(toDoData).map((val, idx) => { 
 		data.push(toDoData[val])
 	})
-	
 	if(once === 0){
 		console.log('im here');
 		handleGet();
 		once++ ;
 	         }
+
   let [list, setList] = useState([]);
   const [count, setCount] = useState(0);
 
@@ -30,13 +30,15 @@ function ToDo() {
     items._id = Math.random();
     items.complete = false;
     items && setList([...list, items]);
-//     console.log([...list, items]);
   };
  
  const _handleDelete = id =>{
+        console.log(id);
+	 habdleDelete(id);
+	setTimeout(function refresh(){
 
-	habdleDelete(id);
-	window.location.reload(false);
+		window.location.reload(false);
+	},500);
  }
  const _updateStatus = (status,_id) =>{
 
@@ -57,12 +59,12 @@ function ToDo() {
           <Navbar.Brand >To DO Manager ({count}) </Navbar.Brand>
         </Navbar>
           <section className="todo">
-              <div className="form-border">
-                  <TodoForm handleSubmit={_addItem} />
-              </div>
-              <div className="list-group">
-                   <TodoList list={data} handleDelete={_handleDelete} updateStatus={_updateStatus} />
-              </div>
+	<div className="form-border">
+          <TodoForm handleSubmit={_addItem} />
+	</div>
+	<div className="list-group">
+	<TodoList list={data} handleDelete={_handleDelete} updateStatus={_updateStatus}  />
+	</div>
           </section>
       </Container>
     </>
