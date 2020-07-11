@@ -8,7 +8,7 @@
 
 - [pull request](https://github.com/401-advanced-javascript-ammar-hariry/todo/pull/5)
 - [github Action](https://github.com/401-advanced-javascript-ammar-hariry/todo/runs/861353221)
-
+- [github pages deploy](https://401-advanced-javascript-ammar-hariry.github.io/todo/)
 
 ### Packages and modules
 - ``node-sass``
